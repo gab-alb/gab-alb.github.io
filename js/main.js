@@ -31,7 +31,7 @@ const renderPokemon = async pokemon => {
     pokemonImage.style.display = 'block'
     pokemonName.innerHTML = pokemonData.name
     pokemonID.innerHTML = pokemonData.id + ' - '
-    pokemonImage.src = pokemonData['sprites']['front_default']
+    pokemonImage.src = pokemonData['sprites']['versions']['generation-v']['black-white']['animated']['front_default']
 
     input.value = ''
 
