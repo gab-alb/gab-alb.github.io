@@ -23,6 +23,11 @@ const fetchPokemon = async pokemon => {
 
 const renderPokemon = async pokemon => {
   pokemonID.innerHTML = ''
+
+  if (pokemonName.style.fontSize === '18px') {
+    pokemonName.style.fontSize = '24px'
+  }
+
   pokemonName.innerHTML = 'carregando...'
 
   const pokemonData = await fetchPokemon(pokemon)
