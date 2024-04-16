@@ -30,8 +30,16 @@ const renderPokemon = async pokemon => {
   if (pokemonData) {
     pokemonImage.style.display = 'block'
     pokemonName.innerHTML = pokemonData.name
+
+    if (pokemonData.name.length > 15) {
+      pokemonName.style.fontSize = '18px'
+    } else {
+      pokemonName.style.fontSize = '24px'
+    }
+
     pokemonID.innerHTML = pokemonData.id + ' - '
-    pokemonImage.src = pokemonData['sprites']['versions']['generation-v']['black-white']['animated']['front_default']
+    pokemonImage.src =
+      pokemonData['sprites']['other']['official-artwork']['front_default']
 
     input.value = ''
 
